@@ -1,0 +1,184 @@
+{
+  "tenant_id": "1",
+  "purchaseOrderNo": "Y10605468",
+  "purchaseOrderLines": {
+    "isPreOrder": "false",
+    "itemAttributes": {
+      "productAttributes": {
+        "itemImageURL": "",
+        "productName": "",
+        "itemNumber": "",
+        "upc": "",
+        "partnerItemId": ""
+      },
+      "offerAttributes": {
+        "offerId": "",
+        "offerType": {},
+        "upc": ""
+      }
+    },
+    "orderedQty": {
+      "measurementValue": "",
+      "unitOfMeasure": ""
+    },
+    "unitPrice": {
+      "currencyAmount": "",
+      "currencyUnit": ""
+    },
+    "totalCharge": {
+      "chargeCategory": "TAX",
+      "isAdjusted": false,
+      "tax": [
+        {
+          "taxPercentage": 13,
+          "taxName": "HST-13.0",
+          "taxPerLine": {
+            "currencyAmount": 9.74,
+            "currencyUnit": "CAD"
+          }
+        }
+      ],
+      "isDiscount": false,
+      "chargeName": "TAX",
+      "isBillable": true
+    },
+    "charges": [
+      {
+        "chargeCategory": "TAX",
+        "isAdjusted": false,
+        "tax": [
+          {
+            "taxPercentage": 13,
+            "taxName": "HST-13.0",
+            "taxPerLine": {
+              "currencyAmount": 9.74,
+              "currencyUnit": "CAD"
+            }
+          }
+        ],
+        "isDiscount": false,
+        "chargeName": "TAX",
+        "isBillable": true
+      }
+    ],
+    "orderLineLogistics": {
+      "fulfillmentType": "S2S",
+      "shippingMethod": "STANDARD",
+      "shipToAddress": [
+        {
+          "storeFrontId": {
+            "storeId": "1126"
+          },
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          },
+          "phone": {
+            "completeNumber": "4168548535"
+          },
+          "name": {
+            "firstName": "Corina",
+            "lastName": "Babusanu",
+            "completeName": "Corina Babusanu"
+          },
+          "email": {
+            "emailAddress": "rozinacan@gmail.com"
+          }
+        }
+      ],
+      "orderLineShipment": {
+        "shipNodeType": "DSV",
+        "shipNode": "100264001"
+      },
+      "returnInfo": {
+        "returnableQty": {
+          "measurementValue": 0,
+          "unitOfMeasure": "EACH"
+        }
+      },
+      "orderLineCustomAttributes": {
+        "productName_fr": "Elizabeth Arden Green Tea Jasmine",
+        "shortDesc_fr": "fre"
+      }
+    },
+    "orderLineCustomAttributes": {
+      "productName_fr": "Elizabeth Arden Green Tea Jasmine",
+      "shortDesc_fr": "fre"
+    },
+    "poLineStatusInfos": {
+      "statusChangeDate": "2018-11-06T11:58:46.000-0600",
+      "statusDescription": "Chained Order Created",
+      "status": "PROCESSING",
+      "statusCode": "2100",
+      "statusQuantity": {
+        "measurementValue": 1,
+        "unitOfMeasure": "EACH"
+      }
+    }
+  },
+  "paymentMethod": {
+    "paymentMethodId": "VISA",
+    "paymentReferenceId": "2816115103",
+    "transactions": {
+      "transactionType": "",
+      "processedOn": "",
+      "transactionReference": "",
+      "requestedOn": "",
+      "processedAmount": {
+        "currencyAmount": "",
+        "currencyUnit": ""
+      },
+      "requestedAmount": {
+        "currencyAmount": "",
+        "currencyUnit": ""
+      },
+      "status": ""
+    },
+    "personInfoBillTo": {
+      "address": {
+        "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+        "isPoBox": false,
+        "city": "Mississauga",
+        "countryCode": "CA",
+        "addressType": "RESIDENTIAL",
+        "postalCode": "L4X 1L4",
+        "addressLineOne": "1500 Dundas Street East",
+        "stateOrProvinceCode": "ON",
+        "addressLineThree": "1126"
+      },
+      "phone": {
+        "completeNumber": "4168548535"
+      },
+      "name": {
+        "firstName": "Corina",
+        "lastName": "Babusanu",
+        "completeName": "Corina Babusanu"
+      },
+      "email": {
+        "emailAddress": "rozinacan@gmail.com"
+      },
+      "paymentType": "VISA",
+      "last4DigitsOfCard": "8724",
+      "paymentHandle": "E",
+      "isInstrumentValid": true,
+      "instrumentExpiry": "201912"
+    },
+    "poStatusInfos": {
+      "statusChangeDate": "2018-11-06T11:58:46.000-0600",
+      "statusDescription": "Chained Order Created",
+      "status": "PROCESSING",
+      "statusCode": "2100",
+      "statusQuantity": {
+        "measurementValue": 1,
+        "unitOfMeasure": "EACH"
+      }
+    }
+  }
+}
