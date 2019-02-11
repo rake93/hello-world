@@ -1,0 +1,45 @@
+
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "tenant_id": "tenant_id",
+      "event_payload": {
+        "purchaseOrders": {
+          "*": { "purchaseOrderNo": "purchaseOrderNo" }
+        },
+        "paymentMethods": {
+          "*": {
+            "pmId": "paymentMethodId",
+            "paymentReferenceId": "paymentReferenceId",
+            "paymentType": "paymentType",
+            "last4DigitsOfCard": "last4DigitsOfCard",
+            "paymentHandle": "paymentHandle",
+            "isInstrumentValid": "isInstrumentValid",
+            "instrumentExpiry": "instrumentExpiry"
+          }
+        },
+        "orderLines": {
+          "*": {
+            "isPreOrder": "isPreOrder",
+            "orderedQty": "orderedQty",
+            "poLineId": "poLineId",
+            "orderProduct": {
+              "offerLogistics": {
+                "itemImageURL": "itemImageURL"
+              }
+            }
+          }
+        },
+        "shipToAddress": {
+          "*": {
+            "address": "address",
+            "phone": "phone",
+            "name": "name",
+            "email": "email"
+          }
+        }
+      }
+    }
+  }
+  ]
