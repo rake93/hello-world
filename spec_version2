@@ -1,0 +1,27 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "event_payload": {
+        "purchaseOrders": {
+          "*": {
+            "purchaseOrderLines": "purchaseOrder.purchaseOrderLines"
+          }
+        },
+        "orderLines": {
+          "*": {
+            "returnInfo": "returnInfo"
+          }
+        },
+        "paymentMethods": {
+          "*": {
+            "personInfoBillTo": "purchaseOrder.paymentMethod.personInfoBillTo",
+            "last4DigitsOfCard": "purchaseOrder.paymentMethod.last4DigitsOfCard",
+            "paymentHandle": "purchaseOrder.paymentMethod.paymentHandle",
+            "isInstrumentValid": "purchaseOrder.paymentMethod.isInstrumentValid",
+            "instrumentExpiry": "purchaseOrder.paymentMethod.instrumentExpiry"
+          }
+        }
+      }
+    }
+  }]
