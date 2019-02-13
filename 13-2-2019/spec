@@ -1,0 +1,28 @@
+ [
+  // Test from Jolt Issue 98 : Question one from andrewkcarter
+  // Summary : Bucket data from an Array, based on a leaf level value
+
+   {
+     "operation": "shift",
+     "spec": {
+       "event_payload": {
+         "purchaseOrders": {
+           "purchaseOrderNo": "purchaseOrders[&0].purchaseOrderNo",
+           "*": {
+             "purchaseOrderLines": {
+               "*": {
+                 "orderedQty": "purchaseOrders[&1].purchaseOrderLines[&3].orderedQty",
+                 "primeLineNo": "purchaseOrders[&1].purchaseOrderLines[&3].poLineId"
+               }
+             }
+           }
+         },
+         "orderLines": {
+           "*": {
+             "unitPrice": "purchaseOrders[&1].purchaseOrderLines[&1].UnitPrice"
+           }
+         }
+       }
+     }
+   }
+   ]
