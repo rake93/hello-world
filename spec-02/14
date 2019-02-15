@@ -1,0 +1,17 @@
+[
+  // Flatten an array of photo objects into a prefixed
+  //  soup of properties.
+  {
+    "operation": "shift",
+    "spec": {
+      "purchaseOrders": {
+        "purchaseOrderLines": {
+          "orderedQty": {
+            "": "purchaseOrders[&1].purchaseOrderLines[&3].orderedQty"
+          }
+        }
+      }
+    }
+    }
+
+]
