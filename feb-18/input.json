@@ -1,0 +1,716 @@
+{
+  "tenant_id": "1",
+  "event_id": "2741779527",
+  "event_payload": {
+    "orderType": "DOMESTIC",
+    "shipToAddress": [
+      {
+        "storeFrontId": {
+          "storeId": "1126"
+        },
+        "address": {
+          "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+          "isPoBox": false,
+          "city": "Mississauga",
+          "countryCode": "CA",
+          "addressType": "RESIDENTIAL",
+          "postalCode": "L4X 1L4",
+          "addressLineOne": "1500 Dundas Street East",
+          "stateOrProvinceCode": "ON",
+          "addressLineThree": "1126"
+        },
+        "phone": {
+          "completeNumber": "4168548535"
+        },
+        "name": {
+          "firstName": "Corina",
+          "lastName": "Babusanu",
+          "completeName": "Corina Babusanu"
+        },
+        "email": {
+          "emailAddress": "rozinacan@gmail.com"
+        }
+      }
+    ],
+    "orderTotals": {
+      "grandTotal": {
+        "currencyAmount": 84.68,
+        "currencyUnit": "CAD"
+      }
+    },
+    "orderNo": "2741779527",
+    "accessPointInfo": [
+      {
+        "address": {
+          "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+          "isPoBox": false,
+          "city": "Mississauga",
+          "countryCode": "CA",
+          "addressType": "RESIDENTIAL",
+          "postalCode": "L4X 1L4",
+          "addressLineOne": "1500 Dundas Street East",
+          "stateOrProvinceCode": "ON",
+          "addressLineThree": "1126"
+        }
+      }
+    ],
+    "orderSummary": {
+      "totalAmount": {
+        "currencyAmount": 84.68,
+        "currencyUnit": "CAD"
+      }
+    },
+    "affiliateId": "394434028",
+    "verticalId": "0",
+    "buyerInfo": {
+      "primaryContact": {
+        "phone": {
+          "completeNumber": "4168548535"
+        },
+        "name": {
+          "firstName": "Corina",
+          "lastName": "Babusanu",
+          "completeName": "Corina Babusanu"
+        },
+        "email": {
+          "emailAddress": "rozinacan@gmail.com"
+        }
+      },
+      "guest": false
+    },
+    "charges": [
+      {
+        "chargeCategory": "TAX",
+        "isAdjusted": false,
+        "tax": [
+          {
+            "taxPercentage": 13,
+            "taxName": "HST-13.0",
+            "taxPerLine": {
+              "currencyAmount": 9.74,
+              "currencyUnit": "CAD"
+            }
+          }
+        ],
+        "isDiscount": false,
+        "chargeName": "TAX",
+        "isBillable": true
+      }
+    ],
+    "orderLines": [
+      {
+        "unitPrice": {
+          "currencyAmount": 24.97,
+          "currencyUnit": "CAD"
+        },
+        "orderLineQuantityInfo": [
+          {
+            "statusChangeDate": "2018-11-06T11:58:46.000-0600",
+            "statusDescription": "Chained Order Created",
+            "status": "PROCESSING",
+            "statusCode": "2100",
+            "statusQuantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            }
+          }
+        ],
+        "primeLineNo": 1,
+        "shipToAddress": {
+          "storeFrontId": {
+            "storeId": "1126"
+          },
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          },
+          "phone": {
+            "completeNumber": "4168548535"
+          },
+          "name": {
+            "firstName": "Corina",
+            "lastName": "Babusanu",
+            "completeName": "Corina Babusanu"
+          },
+          "email": {
+            "emailAddress": "rozinacan@gmail.com"
+          }
+        },
+        "lineQuantitySummaries": [
+          {
+            "quantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "type": "Ordered"
+          }
+        ],
+        "shippingMethod": "STANDARD",
+        "accessPointInfo": {
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          }
+        },
+        "orderedLineDates": [
+          {
+            "minExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "dateTypeId": "SHIPMENT",
+            "maxExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "expectedDate": "2018-11-07T00:00:00.000-0600",
+            "requestedDate": "2018-11-07T00:00:00.000-0600"
+          },
+          {
+            "minExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "dateTypeId": "DELIVERY",
+            "maxExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "expectedDate": "2018-11-08T00:00:00.000-0600",
+            "requestedDate": "2018-11-08T00:00:00.000-0600"
+          }
+        ],
+        "orderedQty": {
+          "measurementValue": 1,
+          "unitOfMeasure": "EACH"
+        },
+        "fulfillmentType": "S2S",
+        "returnInfo": {
+          "returnableQty": {
+            "measurementValue": 0,
+            "unitOfMeasure": "EACH"
+          }
+        },
+        "charges": [
+          {
+            "chargePerUnit": {
+              "currencyAmount": 0,
+              "currencyUnit": "CAD"
+            },
+            "chargeCategory": "SHIPPING",
+            "chargePerLine": {
+              "currencyAmount": 0,
+              "currencyUnit": "CAD"
+            },
+            "isAdjusted": false,
+            "tax": [
+              {
+                "taxPercentage": 0,
+                "taxPerUnit": {
+                  "currencyAmount": 0,
+                  "currencyUnit": "CAD"
+                },
+                "taxName": "HST",
+                "taxPerLine": {
+                  "currencyAmount": 0,
+                  "currencyUnit": "CAD"
+                }
+              }
+            ],
+            "chargeQuantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "isDiscount": false,
+            "chargeName": "SHIPPING",
+            "isBillable": true
+          },
+          {
+            "chargePerUnit": {
+              "currencyAmount": 24.97,
+              "currencyUnit": "CAD"
+            },
+            "chargeCategory": "PRODUCT",
+            "isAdjusted": false,
+            "tax": [
+              {
+                "taxPercentage": 13,
+                "taxPerUnit": {
+                  "currencyAmount": 3.24,
+                  "currencyUnit": "CAD"
+                },
+                "taxName": "HST",
+                "taxPerLine": {
+                  "currencyAmount": 3.24,
+                  "currencyUnit": "CAD"
+                }
+              }
+            ],
+            "chargeQuantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "isDiscount": false,
+            "chargeName": "ItemPrice",
+            "isBillable": true
+          }
+        ],
+        "orderLineCustomAttributes": {
+          "productName_fr": "Elizabeth Arden Green Tea Jasmine",
+          "shortDesc_fr": "fre"
+        },
+        "orderProduct": {
+          "offerAttributes": {
+            "offerType": "1P"
+          },
+          "offerLogistics": {
+            "itemImageURL": "http://i5.walmartimages.ca/images/Thumbnails/840/043/6000197840043.jpg"
+          },
+          "offerId": {
+            "offerId": "6000197769258",
+            "upc": null
+          },
+          "productName": "Green Tea Jasmine by Elizabeth Arden"
+        },
+        "isPreOrder": false
+      },
+      {
+        "unitPrice": {
+          "currencyAmount": 49.97,
+          "currencyUnit": "CAD"
+        },
+        "orderLineQuantityInfo": [
+          {
+            "statusChangeDate": "2018-11-06T11:58:46.000-0600",
+            "statusDescription": "Chained Order Created",
+            "status": "PROCESSING",
+            "statusCode": "2100",
+            "statusQuantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            }
+          }
+        ],
+        "primeLineNo": 2,
+        "shipToAddress": {
+          "storeFrontId": {
+            "storeId": "1126"
+          },
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          },
+          "phone": {
+            "completeNumber": "4168548535"
+          },
+          "name": {
+            "firstName": "Corina",
+            "lastName": "Babusanu",
+            "completeName": "Corina Babusanu"
+          },
+          "email": {
+            "emailAddress": "rozinacan@gmail.com"
+          }
+        },
+        "lineQuantitySummaries": [
+          {
+            "quantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "type": "Ordered"
+          }
+        ],
+        "shippingMethod": "STANDARD",
+        "accessPointInfo": {
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          }
+        },
+        "orderedLineDates": [
+          {
+            "minExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "dateTypeId": "SHIPMENT",
+            "maxExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "expectedDate": "2018-11-07T00:00:00.000-0600",
+            "requestedDate": "2018-11-07T00:00:00.000-0600"
+          },
+          {
+            "minExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "dateTypeId": "DELIVERY",
+            "maxExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "expectedDate": "2018-11-08T00:00:00.000-0600",
+            "requestedDate": "2018-11-08T00:00:00.000-0600"
+          }
+        ],
+        "orderedQty": {
+          "measurementValue": 1,
+          "unitOfMeasure": "EACH"
+        },
+        "fulfillmentType": "S2S",
+        "returnInfo": {
+          "returnableQty": {
+            "measurementValue": 0,
+            "unitOfMeasure": "EACH"
+          }
+        },
+        "charges": [
+          {
+            "chargePerUnit": {
+              "currencyAmount": 0,
+              "currencyUnit": "CAD"
+            },
+            "chargeCategory": "SHIPPING",
+            "chargePerLine": {
+              "currencyAmount": 0,
+              "currencyUnit": "CAD"
+            },
+            "isAdjusted": false,
+            "tax": [
+              {
+                "taxPercentage": 0,
+                "taxPerUnit": {
+                  "currencyAmount": 0,
+                  "currencyUnit": "CAD"
+                },
+                "taxName": "HST",
+                "taxPerLine": {
+                  "currencyAmount": 0,
+                  "currencyUnit": "CAD"
+                }
+              }
+            ],
+            "chargeQuantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "isDiscount": false,
+            "chargeName": "SHIPPING",
+            "isBillable": true
+          },
+          {
+            "chargePerUnit": {
+              "currencyAmount": 49.97,
+              "currencyUnit": "CAD"
+            },
+            "chargeCategory": "PRODUCT",
+            "isAdjusted": false,
+            "tax": [
+              {
+                "taxPercentage": 13,
+                "taxPerUnit": {
+                  "currencyAmount": 6.5,
+                  "currencyUnit": "CAD"
+                },
+                "taxName": "HST",
+                "taxPerLine": {
+                  "currencyAmount": 6.5,
+                  "currencyUnit": "CAD"
+                }
+              }
+            ],
+            "chargeQuantity": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "isDiscount": false,
+            "chargeName": "ItemPrice",
+            "isBillable": true
+          }
+        ],
+        "orderLineCustomAttributes": {
+          "productName_fr": "5TH AVE FEMME - 125ML EDP VAPORISATEUR/100ml LOTION POUR LE CORPS SET",
+          "shortDesc_fr": "fre"
+        },
+        "orderProduct": {
+          "offerAttributes": {
+            "offerType": "1P"
+          },
+          "offerLogistics": {
+            "itemImageURL": "http://i5.walmartimages.ca/images/Thumbnails/390/119/6000198390119.jpg"
+          },
+          "offerId": {
+            "offerId": "6000198278822",
+            "upc": null
+          },
+          "productName": "Elizabeth Arden 5TH Ave Ladies - 125ML Edp Spray/100ml Body Lotion Set"
+        },
+        "isPreOrder": false
+      }
+    ],
+    "paymentMethods": [
+      {
+        "amountCollected": {
+          "currencyAmount": 0,
+          "currencyUnit": "CAD"
+        },
+        "pmId": "VISA",
+        "paymentReferenceId": "2816115103",
+        "transactions": [
+          {
+            "transactionType": "AUTHORIZATION",
+            "processedOn": "2018-11-06T11:06:27.000-0600",
+            "transactionReference": "201811061103192139658888",
+            "processedAmount": {
+              "currencyAmount": 0,
+              "currencyUnit": "CAD"
+            },
+            "requestedOn": "2018-11-06T11:03:18.000-0600",
+            "requestedAmount": {
+              "currencyAmount": 84.68,
+              "currencyUnit": "CAD"
+            },
+            "status": "CLOSED"
+          }
+        ],
+        "personInfoBillTo": {
+          "address": {
+            "addressLineTwo": "",
+            "isPoBox": false,
+            "city": "MISSISSAUGA",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4Y 3A7",
+            "addressLineOne": "3145 Queen Frederica Dr",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": ""
+          },
+          "phone": {
+            "completeNumber": "4168548535"
+          },
+          "name": {
+            "firstName": "Corina Babusanu",
+            "lastName": "Babusanu",
+            "completeName": "Corina Babusanu Babusanu"
+          },
+          "email": {
+            "emailAddress": "rozinacan@gmail.com"
+          }
+        },
+        "piHash": "PIH.volt.VISA.CREDITCARD.4500032396428724.8724",
+        "paymentType": "VISA",
+        "last4DigitsOfCard": "8724",
+        "amountpromised": {
+          "currencyAmount": 84.68,
+          "currencyUnit": "CAD"
+        },
+        "paymentHandle": "E",
+        "amountRefunded": {
+          "currencyAmount": 0,
+          "currencyUnit": "CAD"
+        },
+        "amountRequested": {
+          "currencyAmount": 84.68,
+          "currencyUnit": "CAD"
+        },
+        "isInstrumentValid": true,
+        "instrumentExpiry": "201912"
+      }
+    ],
+    "tenantId": "1",
+    "holds": [
+      {
+        "holdTypeId": "AWAIT_FRAUD_PROCESS",
+        "holdCreatedDate": "2018-11-06T11:03:18.000-0600",
+        "holdStatus": "RELEASED",
+        "holdStatusDate": "2018-11-06T11:05:58.000-0600",
+        "holdReasonCode": ""
+      },
+      {
+        "holdTypeId": "AWAIT_ORDER_MODIFY",
+        "holdCreatedDate": "2018-11-06T11:03:18.000-0600",
+        "holdStatus": "RELEASED",
+        "holdStatusDate": "2018-11-06T11:49:52.000-0600",
+        "holdReasonCode": ""
+      }
+    ],
+    "lastModified": "2018-11-06T11:58:46.000-0600",
+    "orderDate": "2018-11-06T11:03:17.000-0600",
+    "purchaseOrders": [
+      {
+        "purchaseOrderNo": "Y10605468",
+        "purchaseOrderLines": [
+          {
+            "poLineStatusInfos": [
+              {
+                "poLineStatusQuantity": {
+                  "measurementValue": 1,
+                  "unitOfMeasure": "EACH"
+                },
+                "poLineStatusCode": "1100",
+                "poLineStatusChangeDate": "2018-11-06T11:58:46.000-0600",
+                "poLineStatusDescription": "Created",
+                "poLineStatus": "PROCESSING"
+              }
+            ],
+            "primeLineNo": 1,
+            "requestOfferId": {
+              "offerId": "6000197769258",
+              "upc": null
+            },
+            "fulfillerLineId": "1",
+            "distributorRequestItem": {
+              "walmartItemNumber": "6000197769258"
+            },
+            "orderedQty": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "poLineId": "1"
+          }
+        ],
+        "shipToAddress": {
+          "storeFrontId": {
+            "storeId": "1126"
+          },
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          },
+          "phone": {
+            "completeNumber": "4168548535"
+          },
+          "name": {
+            "firstName": "Corina",
+            "lastName": "Babusanu",
+            "completeName": "Corina Babusanu"
+          },
+          "email": {
+            "emailAddress": "rozinacan@gmail.com"
+          }
+        },
+        "shipNode": "100264001",
+        "poDate": [
+          {
+            "minExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "dateTypeId": "SHIPMENT",
+            "maxExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "expectedDate": "2018-11-07T00:00:00.000-0600",
+            "requestedDate": "2018-11-07T00:00:00.000-0600"
+          },
+          {
+            "minExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "dateTypeId": "DELIVERY",
+            "maxExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "expectedDate": "2018-11-08T00:00:00.000-0600",
+            "requestedDate": "2018-11-08T00:00:00.000-0600"
+          }
+        ],
+        "shipNodeType": "DSV",
+        "status": "Created"
+      },
+      {
+        "purchaseOrderNo": "Y10605472",
+        "purchaseOrderLines": [
+          {
+            "poLineStatusInfos": [
+              {
+                "poLineStatusQuantity": {
+                  "measurementValue": 1,
+                  "unitOfMeasure": "EACH"
+                },
+                "poLineStatusCode": "1100",
+                "poLineStatusChangeDate": "2018-11-06T11:58:46.000-0600",
+                "poLineStatusDescription": "Created",
+                "poLineStatus": "PROCESSING"
+              }
+            ],
+            "primeLineNo": 1,
+            "requestOfferId": {
+              "offerId": "6000198278822",
+              "upc": null
+            },
+            "fulfillerLineId": "1",
+            "distributorRequestItem": {
+              "walmartItemNumber": "6000198278822"
+            },
+            "orderedQty": {
+              "measurementValue": 1,
+              "unitOfMeasure": "EACH"
+            },
+            "poLineId": "1"
+          }
+        ],
+        "shipToAddress": {
+          "storeFrontId": {
+            "storeId": "1126"
+          },
+          "address": {
+            "addressLineTwo": "Walmart Mississauga Dixie Supercentre",
+            "isPoBox": false,
+            "city": "Mississauga",
+            "countryCode": "CA",
+            "addressType": "RESIDENTIAL",
+            "postalCode": "L4X 1L4",
+            "addressLineOne": "1500 Dundas Street East",
+            "stateOrProvinceCode": "ON",
+            "addressLineThree": "1126"
+          },
+          "phone": {
+            "completeNumber": "4168548535"
+          },
+          "name": {
+            "firstName": "Corina",
+            "lastName": "Babusanu",
+            "completeName": "Corina Babusanu"
+          },
+          "email": {
+            "emailAddress": "rozinacan@gmail.com"
+          }
+        },
+        "shipNode": "100264001",
+        "poDate": [
+          {
+            "minExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "dateTypeId": "SHIPMENT",
+            "maxExpectedDate": "2018-11-07T00:00:00.000-0600",
+            "expectedDate": "2018-11-07T00:00:00.000-0600",
+            "requestedDate": "2018-11-07T00:00:00.000-0600"
+          },
+          {
+            "minExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "dateTypeId": "DELIVERY",
+            "maxExpectedDate": "2018-11-08T00:00:00.000-0600",
+            "expectedDate": "2018-11-08T00:00:00.000-0600",
+            "requestedDate": "2018-11-08T00:00:00.000-0600"
+          }
+        ],
+        "shipNodeType": "DSV",
+        "status": "Created"
+      }
+    ],
+    "paymentStatus": "AUTHORIZED"
+  },
+  "event_type": "PO_CREATE",
+  "shard_id": 0,
+  "event_name": "Order",
+  "vertical_id": "0",
+  "event_source": "CA_OMS",
+  "src_modified_dt": "2018-11-06T11:58:46.701-0600",
+  "src_created_dt": "2018-11-06T11:58:46.701-0600",
+  "event_time": "2018-11-06T11:58:46.701-0600"
+}
