@@ -1,0 +1,57 @@
+[{
+    "operation": "shift",
+    "spec": {
+      "event_payload": {
+        "purchaseOrders": {
+          "*": {
+            "@(0,purchaseOrderNo)": ["purchaseOrders.[&1].purchaseOrderNo", "purchaseOrders.[&1].sourceMarketOrderNo"],
+            "@(2,paymentMethods)": {
+              "*": {
+                "paymentReferenceId": "purchaseOrders.[&2].paymentMethod.paymentReferenceId",
+                "pmId": "purchaseOrders.[&2].paymentMethod.pmId",
+                "personInfoBillTo": "purchaseOrders.[&2].paymentMethod.personInfoBillTo",
+                "paymentType": "purchaseOrders.[&2].paymentMethod.paymentType",
+                "last4DigitsOfCard": "purchaseOrders.[&2].paymentMethod.last4DigitsOfCard",
+                "paymentHandle": "purchaseOrders.[&2].paymentMethod.paymentHandle",
+                "isInstrumentValid": "purchaseOrders.[&2].paymentMethod.isInstrumentValid",
+                "instrumentExpiry": "purchaseOrders.[&2].paymentMethod.instrumentExpiry"
+              }
+            },
+            "@(2,orderLines)": {
+              "*": {
+                "unitPrice": "purchaseOrders.[&3].purchaseOrderLines[&2].unitPrice",
+                "orderProduct": {
+                  "offerAttributes": {
+                    "offerType": "purchaseOrders.[&4].purchaseOrderLines[&3].itemAttributes.offerAttributes.offerType"
+                  }
+                }
+              }
+            },
+            "@(0,shipNode)": "purchaseOrders.[&1].partner.partnerId",
+            "@(0,shipNodeType)": "purchaseOrders.[&1].partner.partnerType",
+            "@(0,purchaseOrderLines)": {
+              "*": {
+                "@(0,poLineId)": "purchaseOrders.[&2].purchaseOrderLines[&].poLineId",
+                "@(0,orderedQty)": "purchaseOrders.[&2].purchaseOrderLines[&].orderedQty"
+              }
+            }
+          }
+        }
+      }
+    }
+},
+
+
+  {
+    "operation": "default",
+    "spec": {
+      "*[]": {
+        "*": {
+          "isPreOrder": "false"
+        }
+      }
+    }
+  }
+
+
+]
