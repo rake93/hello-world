@@ -1,0 +1,1 @@
+purchaseOrderLines.itemAttributes  array which contains offerAttributes and product ATtributes is what current spec is lacking. It has to be fetched from event_payload.orderLines array.
