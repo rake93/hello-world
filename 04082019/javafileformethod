@@ -1,0 +1,143 @@
+
+public String getSlicedOrderJson(String eventPayload){
+
+
+        List<XOrderEventProto.XOrderEvent.Builder> xOrderEventBuilderList = new ArrayList<>();
+
+        try{
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+            LinkedHashMap keyValues = mapper.readValue(eventPayload, LinkedHashMap.class);
+
+            if (null != keyValues) {
+                List orderLinesList = (List) keyValues.get("orderLines");
+
+                List<LinkedHashMap> shipmentsList = (List) keyValues.get("shipments");
+
+                if(null != orderLinesList) {
+                    for (int lineIndex = 0; lineIndex < orderLinesList.size(); lineIndex++) {
+
+                        LinkedHashMap newKeyValues = keyValues;
+
+                        LinkedHashMap orderLine = (LinkedHashMap) orderLinesList.get(lineIndex);
+
+                        if(null != orderLine ) {
+
+                            String mdsFamId= (String)orderLine.get("mdsFamId");
+                            List orderLineQuantityList = (List) orderLine.get("orderLineQuantityInfo");
+
+                            for (int lineQuantityIndex = 0;
+                                 lineQuantityIndex < orderLineQuantityList.size();
+                                 lineQuantityIndex++) {
+
+                                LinkedHashMap newOrderLine = orderLine;
+
+                                List<LinkedHashMap> newOrderQuantityInfoList =new ArrayList<>();
+                                newOrderQuantityInfoList.add((LinkedHashMap) orderLineQuantityList.get(lineQuantityIndex));
+
+                                newOrderLine.put("orderLineQuantityInfo",newOrderQuantityInfoList);
+
+                                List<LinkedHashMap> newOrderLineList = new ArrayList<>();
+                                newOrderLineList.add(newOrderLine);
+
+                                if (null != newOrderLineList) newKeyValues.put("orderLines", newOrderLineList);
+
+                                String eventStatus= (String)
+                                        ((LinkedHashMap) orderLineQuantityList.get(lineQuantityIndex))
+                                                .get("statusDescription");
+
+                                if(eventStatus.equalsIgnoreCase("Acknowledged")
+                                        || eventStatus.equalsIgnoreCase("Shipped")
+                                        || eventStatus.equalsIgnoreCase("Cancelled")){
+
+
+                                    if (null != shipmentsList &&  !eventStatus.isEmpty() && eventStatus.equalsIgnoreCase("Shipped")) {
+
+                                        List<LinkedHashMap> newShipmentsList = new ArrayList();
+
+
+
+                                        for(int shipmentIndex=0; shipmentIndex<shipmentsList.size(); shipmentIndex++){
+                                            List newShipmentLineList = new ArrayList();
+                                            LinkedHashMap newShipmentsAtLine = new LinkedHashMap();
+                                            LinkedHashMap shipmentsAtLine = shipmentsList.get(shipmentIndex);
+
+                                            if(!shipmentsAtLine.isEmpty()){
+                                                List<LinkedHashMap> shipmentLinesList =
+                                                        (List) shipmentsAtLine.get("shipmentLines");
+
+                                                for (int shipmentLineIndex = 0;
+                                                     shipmentLineIndex < shipmentLinesList.size();
+                                                     shipmentLineIndex++) {
+
+                                                    LinkedHashMap shipmentLine = shipmentLinesList.get(shipmentLineIndex);
+
+                                                    if(!shipmentLine.isEmpty()){
+                                                        if (orderLine.get("primeLineNo") == shipmentLine.get("primeLineNo")) {
+
+                                                            newShipmentsAtLine.putAll(shipmentsAtLine);
+                                                            newShipmentsAtLine.put("shipmentNo",(String)keyValues.get("orderNo")+"-"+shipmentLine.get("primeLineNo").toString());
+
+                                                            newShipmentLineList.add(shipmentLine);
+
+
+
+                                                        }
+                                                    }
+                                                }
+                                                newShipmentsAtLine.put("shipmentLines", newShipmentLineList);
+                                                newShipmentsList.add(newShipmentsAtLine);
+
+                                            }
+                                        }
+                                        newKeyValues.put("shipments", newShipmentsList);
+                                    }
+                                    else{
+                                        newKeyValues.remove("shipments");
+                                    }
+                                    if(eventStatus.equalsIgnoreCase("shipped"))
+                                        eventStatus = Constants.OrderLineTransaction.SHIP.toString();
+                                    else if(eventStatus.equalsIgnoreCase("Acknowledged"))
+                                        eventStatus = Constants.OrderLineTransaction.ACKNOWLEDGE.toString();
+                                    else if(eventStatus.equalsIgnoreCase("Cancelled"))
+                                        eventStatus=Constants.OrderLineTransaction.CANCEL.toString();
+
+                                    xOrderEventBuilderList.add(
+                                            XOrderEventProto.XOrderEvent.newBuilder()
+                                                    .setEventId(UUID.randomUUID().toString())
+                                                    .setEventSource(samsOrderSourcerHeaderConfig.getEvent_Source())
+                                                    .setEventSourceId(samsOrderSourcerHeaderConfig.getSUPPLIER_SHOP_ID())
+                                                    .setEventOrderNo((String)newKeyValues.get("orderNo"))
+                                                    .setEventOrderId((String)newKeyValues.get("externalOrderId"))
+                                                    .setEventOrderLineNo(mdsFamId)
+                                                    .setEventPayload(new ObjectMapper().writeValueAsString(newKeyValues))
+                                                    .setEventType(eventStatus)
+                                                    .setEventCreatedBy("Sams-Inbound-Sourcer")
+                                                    .setLastProcessedTimestamp(UUIDs.timeBased().hashCode())
+                                                    .build()
+                                                    .toBuilder());
+
+
+                                }
+                                else{
+                                    LOGGER.error(
+                                            LoggerUtil.generateLogMessage(
+                                                    SplunkKeys.XORDERSAMSOUTBOUND_ORDER_POST.name()
+                                                            + "={}. This eventpayload donot belong to Acknowledged , shipped or cancelled events and need not be processed for CBT"
+                                                            + eventPayload
+                                                            + "}")); }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        catch (Exception e){
+            LOGGER.info(
+                    SplunkKeys.XORDERSAMSOUTBOUND_ORDER_POST.name() + "={}",
+                    LoggerUtil.formatForLog("XOrderEvent Create failed for eventpayload " + eventPayload +" "+e.getMessage()));
+        }
+
+        return xOrderEventBuilderList;
+    }
